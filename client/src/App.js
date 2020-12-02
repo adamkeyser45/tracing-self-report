@@ -2,6 +2,7 @@ import React from 'react';
 
 import './App.css';
 import SignIn from './pages/SignIn';
+import Confidentiality from './pages/Confidentiality';
 import Nav from './Nav/index';
 
 
@@ -10,7 +11,8 @@ function App() {
 
     <div>
       {/* <SignIn></SignIn> */}
-      <Nav></Nav>
+      <Confidentiality></Confidentiality>
+      {/* <Nav></Nav> */}
     </div>
 
 
