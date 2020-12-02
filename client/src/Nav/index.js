@@ -93,7 +93,7 @@ export default function Pricing() {
               Contact Tracing
             </Link>
           </nav>
-          <Button href="#" color="primary" variant="outlined" className={classes.link}>
+          <Button href="#" color="primary" variant="outlined" className={classes.link} onClick={() => { setCurrentPage('SignIn') }}>
             Logout
           </Button>
         </Toolbar>
