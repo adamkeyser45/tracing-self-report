@@ -1,8 +1,8 @@
 import React from 'react';
 // import Avatar from '@material-ui/core/Avatar';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
+// import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 // import Link from '@material-ui/core/Link';
@@ -56,7 +56,7 @@ export default function Confidentiality() {
                 </li>
               </ol>
 
-              Your cooperation here is essential in Tennessee's fight against this disease. To continue, check the box below and click "Next".
+              Your cooperation here is essential in Tennessee's fight against this disease. To continue, check the box below and click "Move to Next Section".
 
             </Typography>
           </Grid>
@@ -65,6 +65,11 @@ export default function Confidentiality() {
               control={<Checkbox color="secondary" name="hippaAgree" value="yes" />}
               label="I agree to provide the necessary information and understand the confidentiality of doing so."
             />
+          </Grid>
+          <Grid item xs={12}>
+            <Button variant="contained" color="primary">
+              Move to Next Section: Demographics
+            </Button>
           </Grid>
         </Grid>
       </Container></Paper>
