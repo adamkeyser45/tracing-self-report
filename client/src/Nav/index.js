@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   link: {
-    margin: theme.spacing(1, 1.5),
+    margin: theme.spacing(1, 4),
   }
 }));
 
@@ -54,21 +54,30 @@ export default function Pricing() {
       <AppBar position="fixed" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            Company name
+            Contact Tracing
           </Typography>
           <nav>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-              Features
+              Confidentiallity
             </Link>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-              Enterprise
+              Demographics
             </Link>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-              Support
+              Symptoms
+            </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Exposure
+            </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Travel
+            </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Contact Tracing
             </Link>
           </nav>
           <Button href="#" color="primary" variant="outlined" className={classes.link}>
-            Login
+            Logout
           </Button>
         </Toolbar>
       </AppBar>
