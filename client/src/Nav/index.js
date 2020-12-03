@@ -11,10 +11,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Confidentiality from '../pages/Confidentiality';
 import ContactTracing from '../pages/ContactTracing';
 import Demographics from '../pages/Demographics';
-import Exposure from '../pages/Exposure';
+// import Exposure from '../pages/Exposure';
 import SignIn from '../pages/SignIn';
-import Symptoms from '../pages/Symptoms';
-import Travel from '../pages/Travel';
+// import Symptoms from '../pages/Symptoms';
+// import Travel from '../pages/Travel';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
