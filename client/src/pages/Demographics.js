@@ -67,9 +67,15 @@ export default function Demographics() {
               autoComplete="family-name"
             />
           </Grid>
-          <Typography>
-            Date of birth Placeholder
-          </Typography>
+          <Grid item xs={12}>
+            <TextField
+              required
+              id="dateOfBirth"
+              name="dateOfBirth"
+              label="Date of Birth MM/DD/YYYY"
+              fullWidth
+            />
+          </Grid>
           <Grid item xs={12}>
             <TextField
               required
@@ -149,8 +155,8 @@ export default function Demographics() {
           </Grid>
           <Grid item xs={12} sm={6}>
           <FormControl component="fieldset">
-            <FormLabel component="legend">Gender</FormLabel>
-            <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+            <FormLabel component="legend">What is your sex?</FormLabel>
+            <RadioGroup row aria-label="sex" name="sex1" value={value} onChange={handleChange}>
               <FormControlLabel value="female" control={<Radio />} label="Female" />
               <FormControlLabel value="male" control={<Radio />} label="Male" />
               <FormControlLabel value="other" control={<Radio />} label="Other" />
