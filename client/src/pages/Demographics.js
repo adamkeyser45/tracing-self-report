@@ -31,6 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
   raceCheckBoxes: {
     marginTop: 5
+  },
+  descriptPadding: {
+    padding: theme.spacing(3, 2, 0)
+  },
+  formContainerPadding: {
+    padding: theme.spacing(2, 2, 5),
   }
 }));
 
@@ -51,12 +57,12 @@ export default function Demographics() {
         
         <Card raised="true">
           
-          <Typography variant="h5" align="center">
+          <Typography variant="h5" align="center" className={classes.descriptPadding}>
             Please enter the following demographic information to confirm that it is correct in our records.
           </Typography>
           
-          <Container fixed="true">
-            <Grid container xs={12} sm={6}>
+          <Container width="auto" maxWidth="md" component="main" className={classes.formContainerPadding}>
+            <Grid container xs={12} sm={8}>
               <Grid item xs={12} sm={4}>
                 <TextField required id="firstName" name="firstName" label="First Name" autoComplete="given-name"/>
               </Grid>
@@ -68,14 +74,14 @@ export default function Demographics() {
               </Grid>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={8}>
               <TextField required id="address1" name="address1" label="Street Address" fullWidth autoComplete="address-line1"/>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={8}>
               <TextField id="address2" name="address2" label="Street Address 2" fullWidth autoComplete="address-line2"/>
             </Grid>
 
-            <Grid container xs={12} sm={6}>
+            <Grid container xs={12} sm={8}>
               <Grid item xs={12} sm={3}>
                 <TextField required id="city" name="city" label="City" autoComplete="address-level2"/>
               </Grid>
@@ -90,7 +96,7 @@ export default function Demographics() {
               </Grid>
             </Grid>
 
-            <Grid container xs={12} sm={6}>
+            <Grid container xs={12} sm={8}>
               <Grid item xs={12} sm={4}>
                 <TextField required id="primaryPhone" name="primaryPhone" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
               </Grid>
@@ -99,7 +105,7 @@ export default function Demographics() {
               </Grid>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={8}>
               <FormControl component="fieldset" className={classes.sexRadioButtons}>
                 <FormLabel component="legend">What is your sex?</FormLabel>
                 <RadioGroup row aria-label="sex" name="sex1" value={value} onChange={handleChange}>
@@ -110,7 +116,7 @@ export default function Demographics() {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={8}>
               <FormControl component="fieldset" className={classes.raceCheckBoxes}>
               <FormLabel component="legend">What is your race?</FormLabel>
                 <FormGroup row>
