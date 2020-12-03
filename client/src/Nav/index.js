@@ -26,8 +26,6 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
-    top: 'auto',
-    bottom: 0,
   },
   toolbar: {
     flexWrap: 'wrap',
@@ -68,7 +66,7 @@ export default function Pricing() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="fixed" color="default" elevation={0} className={classes.appBar}>
+      <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             Contact Tracing
