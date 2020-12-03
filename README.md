@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Contact Tracing Self Reporting Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  - [Description](#description)
+  - [Screenshots](#screenshots)
+  - [About](#about)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribution](#contribution)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This is the basic front end to a Contact Tracing Self Reporting Form. It would be used by local and state health departments to allow users to complete their own contact tracing, which would free up valuable resources for the health departments.
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Screenshot of signin page](client/assets/homePageSS.png)
+![Screenshot of confidentiality page](client/assets/confidentPageSS.png)
+![Screenshot of demographics page](client/assets/demoPageSS.png)
+![Screenshot of contact tracing page](client/assets/tracingPageSS.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About
 
-### `npm test`
+This project is strictly front end at the moment, using React and Material-Ui to create the application. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Users are first brought to the Sign In page. I have imagined for this application that the local health departments would give each individual a unique username and password when they have tested positive for COVID-19.
+    * The links at the top of the page to the different sections would be hidden if a user is not logged in.
+* After a user logs in, they should be redirected to the "Confidentiality" page. This is to make sure that the user is aware of the confidentiality that will be used concerning their personal health information. A user will then have to confirm they are aware of their rights before moving on.
+    * Note: I have added a disclaimer to make sure that people understand that this is NOT affiliated with any actual contact tracing efforts.
+* A user should then enter their demographics on the following page.
+    * Future Development: On the right side of this page, I would like to add in an infographic about why the health department is collecting this information.
+* Finally, a user will input their close contacts. A description of who a close contact is at the top of the page helps users know who to put down.
+    * Future Development: Currently their are only three lines for close contacts. In the future, the input lines for contacts will be dynamically generated as a user types in each line.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm install`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
+Run the following command at the root of your project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm start`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution
+Main Contributor:
+- Adam Keyser (github.com/adamkeyser45)
