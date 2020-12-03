@@ -50,12 +50,12 @@ export default function Pricing() {
           return <Confidentiality />;
         case 'Demographics':
             return <Demographics />
-        case 'Symptoms':
-          return <Symptoms />
-        case 'Exposure':
-          return <Exposure />
-        case 'Travel':
-          return <Travel />
+        // case 'Symptoms':
+        //   return <Symptoms />
+        // case 'Exposure':
+        //   return <Exposure />
+        // case 'Travel':
+        //   return <Travel />
         case 'ContactTracing':
           return <ContactTracing />
         default:
@@ -78,7 +78,7 @@ export default function Pricing() {
             <Link variant="button" color="textPrimary" href="#" className={classes.link} onClick={() => { setCurrentPage('Demographics') }}>
               Demographics
             </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link} onClick={() => { setCurrentPage('Symptoms') }}>
+            {/* <Link variant="button" color="textPrimary" href="#" className={classes.link} onClick={() => { setCurrentPage('Symptoms') }}>
               Symptoms
             </Link>
             <Link variant="button" color="textPrimary" href="#" className={classes.link} onClick={() => { setCurrentPage('Exposure') }}>
@@ -86,7 +86,7 @@ export default function Pricing() {
             </Link>
             <Link variant="button" color="textPrimary" href="#" className={classes.link} onClick={() => { setCurrentPage('Travel') }}>
               Travel
-            </Link>
+            </Link> */}
             <Link variant="button" color="textPrimary" href="#" className={classes.link} onClick={() => { setCurrentPage('ContactTracing') }}>
               Contact Tracing
             </Link>
