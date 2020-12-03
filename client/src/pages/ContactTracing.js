@@ -32,17 +32,17 @@ const useStyles = makeStyles((theme) => ({
   },
   inputPadding: {
     paddingRight: 10
+  },
+  descriptPadding: {
+    padding: theme.spacing(3, 2, 0)
+  },
+  formContainerPadding: {
+    padding: theme.spacing(1, 2, 3),
   }
 }));
 
 export default function ContactTracing() {
   const classes = useStyles();
-
-  const [value, setValue] = React.useState('');
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
 
   return (
 <div>
@@ -52,7 +52,7 @@ export default function ContactTracing() {
         
         <Card raised="true">
           
-          <Container maxWidth="lg">
+          <Container maxWidth="lg" className={classes.descriptPadding}>
             <Typography variant="h6" align="Left">
               Please enter the following information about any individuals who you would consider a close contact. Keep in mind the following
               factors when determining who is a close-contact:
@@ -73,77 +73,76 @@ export default function ContactTracing() {
             </Typography>
           </Container>
           
-          <Container maxWidth="lg">
-                <Grid container xs={12} sm={10}>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="firstName1" name="firstName1" label="First Name" fullWidth autoComplete="given-name"/>
-                  </Grid>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="lastName1" name="lastName1" label="Last Name" fullWidth autoComplete="family-name"/>
-                  </Grid>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="primaryPhone1" name="primaryPhone1" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                  <FormControl component="fieldset" className={classes.checkboxFormat}>
-                    <FormLabel component="legend">Other Info</FormLabel>
-                      <FormGroup row>
-                        <FormControlLabel labelPlacement="end" control={<Checkbox name="householdContact"/>} label="This individual lives with me."/> 
-                        <FormControlLabel labelPlacement="end" control={<Checkbox name="knownCase"/>} label="Is a known positive case."/>                                             
-                      </FormGroup>
-                    </FormControl>
-                  </Grid>
-                </Grid>
+          <Container maxWidth="lg" className={classes.formContainerPadding}>
+            <Grid container xs={12} sm={10}>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="firstName1" name="firstName1" label="First Name" fullWidth autoComplete="given-name"/>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="lastName1" name="lastName1" label="Last Name" fullWidth autoComplete="family-name"/>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="primaryPhone1" name="primaryPhone1" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+              <FormControl component="fieldset" className={classes.checkboxFormat}>
+                <FormLabel component="legend">Other Info</FormLabel>
+                  <FormGroup row>
+                    <FormControlLabel labelPlacement="end" control={<Checkbox name="householdContact"/>} label="This individual lives with me."/> 
+                    <FormControlLabel labelPlacement="end" control={<Checkbox name="knownCase"/>} label="Is a known positive case."/>                                             
+                  </FormGroup>
+                </FormControl>
+              </Grid>
+            </Grid>
 
-                <Grid container xs={12} sm={10}>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="firstName2" name="firstName2" label="First Name" fullWidth autoComplete="given-name"/>
-                  </Grid>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="lastName2" name="lastName2" label="Last Name" fullWidth autoComplete="family-name"/>
-                  </Grid>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="primaryPhone2" name="primaryPhone2" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                  <FormControl component="fieldset" className={classes.checkboxFormat}>
-                    <FormLabel component="legend">Other Info</FormLabel>
-                      <FormGroup row>
-                        <FormControlLabel labelPlacement="end" control={<Checkbox name="householdContact"/>} label="This individual lives with me."/> 
-                        <FormControlLabel labelPlacement="end" control={<Checkbox name="knownCase"/>} label="Is a known positive case."/>                                             
-                      </FormGroup>
-                    </FormControl>
-                  </Grid>
-                </Grid>
+            <Grid container xs={12} sm={10}>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="firstName2" name="firstName2" label="First Name" fullWidth autoComplete="given-name"/>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="lastName2" name="lastName2" label="Last Name" fullWidth autoComplete="family-name"/>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="primaryPhone2" name="primaryPhone2" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+              <FormControl component="fieldset" className={classes.checkboxFormat}>
+                <FormLabel component="legend">Other Info</FormLabel>
+                  <FormGroup row>
+                    <FormControlLabel labelPlacement="end" control={<Checkbox name="householdContact"/>} label="This individual lives with me."/> 
+                    <FormControlLabel labelPlacement="end" control={<Checkbox name="knownCase"/>} label="Is a known positive case."/>                                             
+                  </FormGroup>
+                </FormControl>
+              </Grid>
+            </Grid>
 
-                <Grid container xs={12} sm={10}>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="firstName3" name="firstName3" label="First Name" fullWidth autoComplete="given-name"/>
-                  </Grid>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="lastName3" name="lastName3" label="Last Name" fullWidth autoComplete="family-name"/>
-                  </Grid>
-                  <Grid item xs={12} sm={2}>
-                    <TextField className={classes.inputPadding} required id="primaryPhone3" name="primaryPhone3" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                  <FormControl component="fieldset" className={classes.checkboxFormat}>
-                    <FormLabel component="legend">Other Info</FormLabel>
-                      <FormGroup row>
-                        <FormControlLabel labelPlacement="end" control={<Checkbox name="householdContact"/>} label="This individual lives with me."/> 
-                        <FormControlLabel labelPlacement="end" control={<Checkbox name="knownCase"/>} label="Is a known positive case."/>                                             
-                      </FormGroup>
-                    </FormControl>
-                  </Grid>
-                </Grid>                
-
+            <Grid container xs={12} sm={10}>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="firstName3" name="firstName3" label="First Name" fullWidth autoComplete="given-name"/>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="lastName3" name="lastName3" label="Last Name" fullWidth autoComplete="family-name"/>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <TextField className={classes.inputPadding} required id="primaryPhone3" name="primaryPhone3" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+              <FormControl component="fieldset" className={classes.checkboxFormat}>
+                <FormLabel component="legend">Other Info</FormLabel>
+                  <FormGroup row>
+                    <FormControlLabel labelPlacement="end" control={<Checkbox name="householdContact"/>} label="This individual lives with me."/> 
+                    <FormControlLabel labelPlacement="end" control={<Checkbox name="knownCase"/>} label="Is a known positive case."/>                                             
+                  </FormGroup>
+                </FormControl>
+              </Grid>
+            </Grid>                
 
             <Grid item xs={12}>
               <Button variant="contained" color="primary">
                 Save Responses
               </Button>
             </Grid>
-            </Container>
+          </Container>
         </Card>
     </div>
   );
