@@ -48,26 +48,42 @@ export default function ContactTracing() {
         
         <Card raised="true">
           
-          <Typography variant="h5" align="Left">
-            Please enter the following information about any individuals who you would consider a close contact.
+          <Container maxWidth="lg">
+            <Typography variant="h6" align="Left">
+              Please enter the following information about any individuals who you would consider a close contact. Keep in mind the following
+              factors when determining who is a close-contact:
 
-            A close contact is omeone who has been within 6 feet of someone with COVID-19, for longer than 15 minutes
-            during the time they could have been contagious. A person can be contagious 2 days before their symptoms start
-            or two days before their test date if they did not have symptoms
-          </Typography>
+              <ol>
+                <li>
+                  A close contact is someone who has been within 6 feet of someone with COVID-19, for longer than 
+                  15 minutes during the time they could have been contagious.                  
+                </li>
+                <li>
+                  A person can be contagious up to two days before their symptoms start, or two days before their test 
+                  date if they did not have symptoms.                 
+                </li>
+                <li>
+                  Enter the information of anyone who was within 6 feet of you for more than 15 minutes from the start
+                  of your contagious period, to when you started your isolation.
+                </li>
+              </ol>
+
+            </Typography>
+          </Container>
           
           <Container fixed="true">
+
             <Grid container xs={12} sm={10}>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={3}>
                 <TextField required id="firstName" name="firstName" label="First Name" fullWidth autoComplete="given-name"/>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={3}>
                 <TextField required id="lastName" name="lastName" label="Last Name" fullWidth autoComplete="family-name"/>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={3}>
                 <TextField required id="primaryPhone" name="primaryPhone" label="Primary Phone" placeholder="XXX-XXX-XXXX" autoComplete="tel"/>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={3}>
                 <FormControl component="fieldset" className={classes.houseHoldQuestion}>
                   <FormLabel component="legend">Does this person live with you?</FormLabel>
                   <RadioGroup row aria-label="householdContact" name="householdContact" value={value} onChange={handleChange}>
