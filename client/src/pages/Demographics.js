@@ -1,6 +1,6 @@
 import React from 'react';
 // import Avatar from '@material-ui/core/Avatar';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 // import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -25,11 +25,16 @@ import { Checkbox } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
-
+  sexRadioButtons: {
+    marginTop: 10
+  },
+  raceCheckBoxes: {
+    marginTop: 5
+  }
 }));
 
 export default function Demographics() {
-  // const classes = useStyles();
+  const classes = useStyles();
 
   const [value, setValue] = React.useState('female');
 
@@ -44,7 +49,7 @@ export default function Demographics() {
         </Typography>
         
         <Paper elevation={3}><Container>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5">
             Please enter the following demographic information to confirm that it is correct in our records.
           </Typography>
 
@@ -54,7 +59,6 @@ export default function Demographics() {
               id="firstName"
               name="firstName"
               label="Case First Name"
-              fullWidth
               autoComplete="given-name"
             />
           </Grid>
@@ -68,7 +72,7 @@ export default function Demographics() {
               autoComplete="family-name"
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <TextField
               required
               id="dateOfBirth"
@@ -77,7 +81,7 @@ export default function Demographics() {
               fullWidth
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <TextField
               required
               id="address1"
@@ -87,7 +91,7 @@ export default function Demographics() {
               autoComplete="address-line1"
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <TextField
               id="address2"
               name="address2"
@@ -155,7 +159,7 @@ export default function Demographics() {
             />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <FormControl component="fieldset">
+            <FormControl component="fieldset" className={classes.sexRadioButtons}>
               <FormLabel component="legend">What is your sex?</FormLabel>
               <RadioGroup row aria-label="sex" name="sex1" value={value} onChange={handleChange}>
                 <FormControlLabel value="female" control={<Radio />} label="Female" />
@@ -165,7 +169,7 @@ export default function Demographics() {
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <FormControl component="fieldset">
+            <FormControl component="fieldset" className={classes.raceCheckBoxes}>
             <FormLabel component="legend">What is your race?</FormLabel>
               <FormGroup row>
                 <FormControlLabel
@@ -202,6 +206,11 @@ export default function Demographics() {
                 />                                                   
               </FormGroup>
             </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <Button variant="contained" color="primary">
+              Move to Next Section: Contact Tracing
+            </Button>
           </Grid>
         </Container></Paper>
     </div>
