@@ -4,7 +4,6 @@ import React from 'react';
 // import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import Checkbox from '@material-ui/core/Checkbox';
 // import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 // import Box from '@material-ui/core/Box';
@@ -19,6 +18,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 // import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import FormGroup from '@material-ui/core/FormGroup';
+import { Checkbox } from '@material-ui/core';
 // import PropTypes from 'prop-types';
 // import MaskedInput from 'react-text-mask';
 
@@ -154,14 +155,53 @@ export default function Demographics() {
             />
           </Grid>
           <Grid item xs={12} sm={6}>
-          <FormControl component="fieldset">
-            <FormLabel component="legend">What is your sex?</FormLabel>
-            <RadioGroup row aria-label="sex" name="sex1" value={value} onChange={handleChange}>
-              <FormControlLabel value="female" control={<Radio />} label="Female" />
-              <FormControlLabel value="male" control={<Radio />} label="Male" />
-              <FormControlLabel value="other" control={<Radio />} label="Other" />
-            </RadioGroup>
-          </FormControl>
+            <FormControl component="fieldset">
+              <FormLabel component="legend">What is your sex?</FormLabel>
+              <RadioGroup row aria-label="sex" name="sex1" value={value} onChange={handleChange}>
+                <FormControlLabel value="female" control={<Radio />} label="Female" />
+                <FormControlLabel value="male" control={<Radio />} label="Male" />
+                <FormControlLabel value="other" control={<Radio />} label="Other" />
+              </RadioGroup>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl component="fieldset">
+            <FormLabel component="legend">What is your race?</FormLabel>
+              <FormGroup row>
+                <FormControlLabel
+                  control={<Checkbox name="raceBlack"/>}
+                  label="Black"
+                />
+                <FormControlLabel
+                  control={<Checkbox name="raceWhite"/>}
+                  label="White"
+                />
+                <FormControlLabel
+                  control={<Checkbox name="raceHispanic"/>}
+                  label="Hispanic"
+                />                
+                <FormControlLabel
+                  control={<Checkbox name="raceAsian"/>}
+                  label="Asian"
+                />
+                <FormControlLabel
+                  control={<Checkbox name="raceNativeAmerican"/>}
+                  label="Native American"
+                />
+                <FormControlLabel
+                  control={<Checkbox name="racePacificIslander"/>}
+                  label="Pacific Islander"
+                />
+                <FormControlLabel
+                  control={<Checkbox name="raceOther"/>}
+                  label="Other"
+                />
+                <FormControlLabel
+                  control={<Checkbox name="raceUnknown"/>}
+                  label="Unknown"
+                />                                                   
+              </FormGroup>
+            </FormControl>
           </Grid>
         </Container></Paper>
     </div>
