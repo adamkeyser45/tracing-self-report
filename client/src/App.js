@@ -1,17 +1,12 @@
 import React from 'react';
-
-import './App.css';
 import Nav from './Nav/index';
-
+import './App.css';
 
 function App() {
   return (
-
     <div>
       <Nav></Nav>
     </div>
-
-
   );
 }
 
