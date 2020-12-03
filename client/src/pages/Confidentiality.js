@@ -25,13 +25,11 @@ export default function Confidentiality() {
     <div>
       <CssBaseline />
         <Typography variant="h3" align="center">
-            Medical Confidentiality
+          Confidentiality and Protection of Health Information
         </Typography>
 
       <Paper elevation={3}><Container>
-        <Typography variant="h5" gutterBottom>
-          Confidentiality and Protection of Health Information
-        </Typography>
+        <br/>
 
         <Grid container spacing={3}>
           <Grid item >
@@ -66,9 +64,9 @@ export default function Confidentiality() {
               label="I agree to provide the necessary information and understand the confidentiality of doing so."
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} alignItems="center">
             <Button variant="contained" color="primary">
-              Move to Next Section: Demographics
+              Save Responses
             </Button>
           </Grid>
         </Grid>

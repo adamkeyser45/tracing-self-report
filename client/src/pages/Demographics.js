@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 // import Input from '@material-ui/core/Input';
@@ -20,6 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import { Checkbox } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
 // import PropTypes from 'prop-types';
 // import MaskedInput from 'react-text-mask';
 
@@ -48,39 +49,44 @@ export default function Demographics() {
             Demographics
         </Typography>
         
-        <Paper elevation={3}><Container>
-          <Typography variant="h5">
+        <Card raised="true">
+          
+          <Typography variant="h5" align="center">
             Please enter the following demographic information to confirm that it is correct in our records.
           </Typography>
+          
+          <Container>
+          
+          <Grid container xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                id="firstName"
+                name="firstName"
+                label="First Name"
+                autoComplete="given-name"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                id="lastName"
+                name="lastName"
+                label="Last Name"
+                autoComplete="family-name"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                id="dateOfBirth"
+                name="dateOfBirth"
+                label="Date of Birth"
+                placeholder="MM/DD/YYYY"
+              />
+            </Grid>
+          </Grid>
 
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="firstName"
-              name="firstName"
-              label="Case First Name"
-              autoComplete="given-name"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="lastName"
-              name="lastName"
-              label="Case Last Name"
-              fullWidth
-              autoComplete="family-name"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="dateOfBirth"
-              name="dateOfBirth"
-              label="Date of Birth MM/DD/YYYY"
-              fullWidth
-            />
-          </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
               required
@@ -100,64 +106,67 @@ export default function Demographics() {
               autoComplete="address-line2"
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
+
+          <Grid container xs={12} sm={6}>
+            <Grid item xs={12} sm={3}>
+              <TextField
+                required
+                id="city"
+                name="city"
+                label="City"
+                autoComplete="address-level2"
+              />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <TextField 
               required
-              id="city"
-              name="city"
-              label="City"
-              fullWidth
-              autoComplete="address-level2"
-            />
+              id="state" 
+              name="state" 
+              label="State" 
+              autoComplete="state" />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <TextField
+                required
+                id="county"
+                name="county"
+                label="County"
+                autoComplete="county"
+              />
+            </Grid>          
+            <Grid item xs={12} sm={3}>
+              <TextField
+                required
+                id="zip"
+                name="zip"
+                label="Zip/Postal code"
+                autoComplete="postal-code"
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField 
-            required
-            id="state" 
-            name="state" 
-            label="State" 
-            fullWidth
-            autoComplete="state" />
+
+          <Grid container xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                required
+                id="primaryPhone"
+                name="primaryPhone"
+                label="Primary Phone"
+                placeholder="XXX-XXX-XXXX"
+                autoComplete="tel"
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                id="secondaryPhone"
+                name="secondaryPhone"
+                label="Secondary Phone"
+                placeholder="XXX-XXX-XXXX"
+                autoComplete="tel"
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="zip"
-              name="zip"
-              label="Zip / Postal code"
-              fullWidth
-              autoComplete="postal-code"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="county"
-              name="county"
-              label="County"
-              fullWidth
-              autoComplete="county"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              required
-              id="primaryPhone"
-              name="primaryPhone"
-              label="Primary Phone XXX-XXX-XXXX"
-              fullWidth
-              autoComplete="tel"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              id="secondaryPhone"
-              name="secondaryPhone"
-              label="Secondary Phone"
-              fullWidth
-              autoComplete="tel"
-            />
-          </Grid>
+
           <Grid item xs={12} sm={6}>
             <FormControl component="fieldset" className={classes.sexRadioButtons}>
               <FormLabel component="legend">What is your sex?</FormLabel>
@@ -209,10 +218,11 @@ export default function Demographics() {
           </Grid>
           <Grid item xs={12}>
             <Button variant="contained" color="primary">
-              Move to Next Section: Contact Tracing
+              Save Responses
             </Button>
           </Grid>
-        </Container></Paper>
+        </Container>
+        </Card>
     </div>
   );
 }
