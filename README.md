@@ -14,10 +14,10 @@ This is the basic front end to a Contact Tracing Self Reporting Form. It would b
 
 ## Screenshots
 
-![Screenshot of signin page](assets/homePageSS.png)
-![Screenshot of confidentiality page](assets/confidentPageSS.png)
-![Screenshot of demographics page](assets/demoPageSS.png)
-![Screenshot of contact tracing page](assets/tracingPageSS.png)
+![Screenshot of signin page](assets/homePageSS.PNG)
+![Screenshot of confidentiality page](assets/confidentPageSS.PNG)
+![Screenshot of demographics page](assets/demoPageSS.PNG)
+![Screenshot of contact tracing page](assets/tracingPageSS.PNG)
 
 ## About
 
